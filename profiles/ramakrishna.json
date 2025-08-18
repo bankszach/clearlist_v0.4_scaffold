@@ -1,0 +1,54 @@
+{
+  "id": "ramakrishna",
+  "version": "0.1.0",
+  "status": "draft",
+  "canonical_name": "Ramakrishna",
+  "alt_names": [
+    "Gadadhar Chattopadhyay"
+  ],
+  "pronunciation": "",
+  "external_titles": [],
+  "life": {
+    "born": {
+      "date": "1836-02-18",
+      "place": "Kamarpukur"
+    },
+    "died": {
+      "date": "1886-08-16",
+      "place": "Cossipore"
+    }
+  },
+  "affiliations": {
+    "traditions": [],
+    "schools": [],
+    "orders": []
+  },
+  "thesis": "",
+  "keywords": [],
+  "claims": [],
+  "practice": [],
+  "sayings": [],
+  "care_notes": [],
+  "media": {
+    "images": [],
+    "audio": [],
+    "video": []
+  },
+  "provenance": {
+    "sources": [],
+    "last_reviewed": "2025-08-18",
+    "reviewer": "editor@clearlist"
+  },
+  "license": {
+    "text": "CC BY-SA 4.0",
+    "media_notes": "respect original holders"
+  },
+  "ai": {
+    "synopsis": "",
+    "qa_pairs": []
+  },
+  "seo": {
+    "slug": "ramakrishna",
+    "summary": ""
+  }
+}
