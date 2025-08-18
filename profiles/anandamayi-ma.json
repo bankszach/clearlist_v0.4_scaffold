@@ -1,0 +1,117 @@
+{
+  "id":"anandamayi-ma",
+  "version":"1.0.0",
+  "status":"draft",
+  "canonical_name":"Anandamayi Ma",
+  "alt_names":[
+    "Ānandamayī Mā",
+    "Nirmala Sundari"
+  ],
+  "pronunciation":"ah-NAHN-da-ma-YEE MAH",
+  "external_titles":[
+    "Ma",
+    "Sri"
+  ],
+  "life":{
+    "born":{
+      "date":"1896-04-30",
+      "place":"Kheora (now Bangladesh)"
+    },
+    "died":{
+      "date":"1982-08-27",
+      "place":"Dehradun, India"
+    }
+  },
+  "affiliations":{
+    "traditions":[
+      "Vedānta"
+    ],
+    "schools":[
+      "Advaita-leaning",
+      "Bhakti"
+    ],
+    "orders":[]
+  },
+  "thesis":"One Self through all forms; devotion and surrender ripen into natural nonduality.",
+  "keywords":[
+    "nonduality",
+    "devotion",
+    "surrender",
+    "universality"
+  ],
+  "claims":[
+    {
+      "text":"Multiple authentic paths converge when walked with sincerity.",
+      "evidence":[
+        "src:1"
+      ]
+    },
+    {
+      "text":"Offer action; loosen the claim of doership.",
+      "evidence":[
+        "src:2"
+      ]
+    }
+  ],
+  "practice":[
+    {
+      "name":"Quiet remembrance",
+      "steps":[
+        "Daily name‑remembrance",
+        "Simple service",
+        "Gentle honesty"
+      ]
+    }
+  ],
+  "sayings":[],
+  "care_notes":[
+    "Encourage grounded practice; avoid extremes"
+  ],
+  "geo":[
+    {
+      "place":"Kheora",
+      "lat":23.03,
+      "lng":91.12
+    }
+  ],
+  "media":{
+    "images":[],
+    "audio":[],
+    "video":[]
+  },
+  "provenance":{
+    "sources":[
+      {
+        "id":"src:1",
+        "title":"Primary discourse",
+        "url":"",
+        "reliability":0.8
+      },
+      {
+        "id":"src:2",
+        "title":"Secondary analysis",
+        "url":"",
+        "reliability":0.6
+      }
+    ],
+    "last_reviewed":"2025-08-18",
+    "reviewer":"editor@clearlist"
+  },
+  "license":{
+    "text":"CC BY-SA 4.0",
+    "media_notes":"respect original holders"
+  },
+  "ai":{
+    "synopsis":"",
+    "qa_pairs":[
+      {
+        "q":"What is surrender here?",
+        "a":"Loosening the claim of doership."
+      }
+    ]
+  },
+  "seo":{
+    "slug":"anandamayi-ma",
+    "summary":"Nondual profile with universalist outlook."
+  }
+}

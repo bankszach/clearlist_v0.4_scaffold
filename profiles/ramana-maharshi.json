@@ -1,0 +1,87 @@
+{
+  "id":"ramana-maharshi",
+  "version":"1.0.0",
+  "status":"draft",
+  "canonical_name":"Ramana Maharshi",
+  "alt_names":[
+    "Bhagavan Sri Ramana"
+  ],
+  "pronunciation":"rah-MAH-nah mah-HAR-shee",
+  "external_titles":[
+    "Sri"
+  ],
+  "life":{
+    "born":{
+      "date":"1879-12-30",
+      "place":"Tiruchuli"
+    },
+    "died":{
+      "date":"1950-04-14",
+      "place":"Tiruvannamalai"
+    }
+  },
+  "affiliations":{
+    "traditions":[
+      "Advaita"
+    ],
+    "schools":[],
+    "orders":[]
+  },
+  "thesis":"Self‑inquiry toward effortless abiding as the Self.",
+  "keywords":[
+    "nonduality",
+    "self-inquiry",
+    "silence"
+  ],
+  "claims":[
+    {
+      "text":"Turn attention toward the felt sense of 'I' as practice.",
+      "evidence":[]
+    },
+    {
+      "text":"Resting as the source of 'I' clarifies action without compulsion.",
+      "evidence":[]
+    }
+  ],
+  "practice":[
+    {
+      "name":"Self‑inquiry",
+      "steps":[
+        "Attend to 'I'",
+        "Notice its source",
+        "Rest as that"
+      ]
+    }
+  ],
+  "sayings":[],
+  "care_notes":[
+    "Gentle approach; avoid strain"
+  ],
+  "media":{
+    "images":[],
+    "audio":[],
+    "video":[]
+  },
+  "provenance":{
+    "sources":[],
+    "last_reviewed":"2025-08-18",
+    "reviewer":"editor@clearlist"
+  },
+  "license":{
+    "text":"CC BY-SA 4.0",
+    "media_notes":"respect original holders"
+  },
+  "ai":{
+    "synopsis":"",
+    "qa_pairs":[
+      {
+        "q":"Core method?",
+        "a":"Self‑inquiry (Who am I?)."
+      }
+    ]
+  },
+  "seo":{
+    "slug":"ramana-maharshi",
+    "summary":"Profile focused on self‑inquiry and silent clarity."
+  }
+}

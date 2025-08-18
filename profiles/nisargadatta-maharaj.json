@@ -1,0 +1,87 @@
+{
+  "id":"nisargadatta-maharaj",
+  "version":"1.0.0",
+  "status":"draft",
+  "canonical_name":"Nisargadatta Maharaj",
+  "alt_names":[
+    "Sri Nisargadatta"
+  ],
+  "pronunciation":"nih-SAR-gah-DUT-tah muh-huh-RAHJ",
+  "external_titles":[
+    "Sri"
+  ],
+  "life":{
+    "born":{
+      "date":"1897-04-17",
+      "place":"Bombay Presidency"
+    },
+    "died":{
+      "date":"1981-09-08",
+      "place":"Bombay (Mumbai)"
+    }
+  },
+  "affiliations":{
+    "traditions":[
+      "Advaita"
+    ],
+    "schools":[],
+    "orders":[]
+  },
+  "thesis":"Direct recognition of the Absolute; hold to the sense 'I Am'.",
+  "keywords":[
+    "nonduality",
+    "I Am",
+    "directness"
+  ],
+  "claims":[
+    {
+      "text":"Stabilize attention in the sense 'I Am' as an entry to clarity.",
+      "evidence":[]
+    },
+    {
+      "text":"'You are not the body-mind' is a pointer, not a belief.",
+      "evidence":[]
+    }
+  ],
+  "practice":[
+    {
+      "name":"'I Am' remembrance",
+      "steps":[
+        "Notice the sense of being",
+        "Return often",
+        "Let thoughts pass"
+      ]
+    }
+  ],
+  "sayings":[],
+  "care_notes":[
+    "Emphasize kindness alongside clarity"
+  ],
+  "media":{
+    "images":[],
+    "audio":[],
+    "video":[]
+  },
+  "provenance":{
+    "sources":[],
+    "last_reviewed":"2025-08-18",
+    "reviewer":"editor@clearlist"
+  },
+  "license":{
+    "text":"CC BY-SA 4.0",
+    "media_notes":"respect original holders"
+  },
+  "ai":{
+    "synopsis":"",
+    "qa_pairs":[
+      {
+        "q":"What is 'I Am' here?",
+        "a":"The bare sense of being, prior to stories."
+      }
+    ]
+  },
+  "seo":{
+    "slug":"nisargadatta-maharaj",
+    "summary":"Profile emphasizing the 'I Am' pointer and directness."
+  }
+}
