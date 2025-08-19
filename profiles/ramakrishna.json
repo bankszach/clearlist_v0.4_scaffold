@@ -1,160 +1,17 @@
 {
- "id":"ramakrishna",
-  "version":"1.0.0",
-  "status":"draft",
-  "canonical_name":"Ramakrishna",
-  "alt_names":[
-    "Gadadhar Chattopadhyay",
-    "Ramakrishna Paramahamsa"
-  ],
-  "pronunciation":"rah-muh-KRISH-nuh",
-  "external_titles":[
-    "Sri",
-    "Paramahamsa"
-  ],
-  "life":{
-    "born":{
-      "date":"1836-02-18",
-      "place":"Kamarpukur"
-    },
-    "died":{
-      "date":"1886-08-16",
-      "place":"Cossipore"
-    }
-  },
-  "affiliations":{
-    "traditions":[
-      "Hinduism",
-      "Vedanta"
-    ],
-    "schools":[
-      "Shakta",
-      "Bhakti"
-    ],
-    "orders":[]
-  },
-  "thesis":"Direct experience of one divine reality underlies diverse faiths.",
-  "keywords":[
-    "devotion",
-    "ecstasy",
-    "nonduality",
-    "tantra",
-    "universalism"
-  ],
-  "claims":[
-    {
-      "text":"Practiced Hindu, Muslim, and Christian devotions and reported realizing the same divine essence.",
-      "evidence":[
-        "src:1"
-      ]
-    },
-    {
-      "text":"Experienced nirvikalpa samadhi under Totapuri in 1866.",
-      "evidence":[
-        "src:2"
-      ]
-    },
-    {
-      "text":"Urged disciples like Narendra to see God in all beings and serve them.",
-      "evidence":[
-        "src:1"
-      ]
-    },
-    {
-      "text":"Discouraged seekers from chasing siddhis or occult powers.",
-      "evidence":[
-        "src:2"
-      ]
-    }
-  ],
-  "practice":[
-    {
-      "name":"Loving worship of a chosen deity",
-      "steps":[
-        "Select an ishta-devata",
-        "Offer mantra and service with intense devotion",
-        "Perceive the same divine everywhere"
-      ]
-    }
-  ],
-  "sayings":[
-    {
-      "text":"As many faiths, so many paths.",
-      "source":"src:1",
-      "verified":true,
-      "license":"public domain"
-    }
-  ],
-  "care_notes":[
-    "Intense ecstasies may disrupt daily functioning; practice with grounding and support."
-  ],
-  "media":{
-    "images":[
-      {
-        "title":"Ramakrishna (c.1884)",
-        "url":"https://upload.wikimedia.org/wikipedia/commons/6/6b/Ramakrishna2.jpg",
-        "license":"Public Domain",
-        "attribution":"Unknown photographer"
-      }
-    ],
-    "audio":[],
-    "video":[]
-  },
-  "provenance":{
-    "sources":[
-      {
-        "id":"src:1",
-        "title":"Swami Nikhilananda, The Gospel of Sri Ramakrishna (1942)",
-        "url":"https://archive.org/details/TheGospelOfSriRamakrishna",
-        "reliability":0.8
-      },
-      {
-        "id":"src:2",
-        "title":"Swami Saradananda, Sri Ramakrishna and His Divine Play (1919)",
-        "url":"https://archive.org/details/sriramakrishnaandhisdivineplay",
-        "reliability":0.7
-      },
-      {
-        "id":"src:3",
-        "title":"Encyclopaedia Britannica, \"Ramakrishna\"",
-        "url":"https://www.britannica.com/biography/Ramakrishna",
-        "reliability":0.6
-      }
-    ],
-    "external_ids":{
-      "wikidata":"Q565234",
-      "viaf":"71480045",
-      "loc":"n79084181"
-    },
-    "last_reviewed":"2025-08-19",
-    "reviewer":"editor@clearlist"
-  },
-  "license":{
-    "text":"CC BY-SA 4.0",
-    "media_notes":"respect original holders"
-  },
-  "ai":{
-    "synopsis":"19th-century Bengali mystic who taught that devoted practice in any faith reveals one divine reality.",
-    "qa_pairs":[
-      {
-        "q":"What did he teach about religions?",
-        "a":"That sincere devotion in any faith can lead to the same God."
-      }
-    ]
-  },
-  "seo":{
-    "slug":"ramakrishna",
-    "summary":"Bengali mystic (1836–1886) emphasizing direct divine experience and the unity of religions."
-=======
   "id": "ramakrishna",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "status": "draft",
   "canonical_name": "Ramakrishna",
   "alt_names": [
-    "Gadadhar Chattopadhyay"
+    "Gadadhar Chattopadhyay",
+    "Sri Ramakrishna Paramahamsa"
   ],
-  "pronunciation": "",
-  "external_titles": [],
+  "pronunciation": "rah-mah-KRISH-nah",
+  "external_titles": [
+    "Sri",
+    "Paramahamsa"
+  ],
   "life": {
     "born": {
       "date": "1836-02-18",
@@ -166,24 +23,72 @@
     }
   },
   "affiliations": {
-    "traditions": [],
-    "schools": [],
+    "traditions": [
+      "Vedānta",
+      "Bhakti"
+    ],
+    "schools": [
+      "Advaita-leaning"
+    ],
     "orders": []
   },
-  "thesis": "",
-  "keywords": [],
-  "claims": [],
-  "practice": [],
+  "thesis": "Direct divine experience through devoted practice in any faith reveals the one divine reality.",
+  "keywords": [
+    "nonduality",
+    "devotion",
+    "religious unity",
+    "direct experience"
+  ],
+  "claims": [
+    {
+      "text": "Sincere devotion in any faith can lead to the same God.",
+      "evidence": [
+        "src:1"
+      ]
+    },
+    {
+      "text": "Direct divine experience transcends religious boundaries.",
+      "evidence": [
+        "src:2"
+      ]
+    }
+  ],
+  "practice": [
+    {
+      "name": "Devotional practice",
+      "steps": [
+        "Choose your preferred form of God",
+        "Practice with sincere devotion",
+        "Seek direct experience"
+      ]
+    }
+  ],
   "sayings": [],
-  "care_notes": [],
+  "care_notes": [
+    "Respect all religious paths",
+    "Focus on direct experience over dogma"
+  ],
   "media": {
     "images": [],
     "audio": [],
     "video": []
   },
   "provenance": {
-    "sources": [],
-    "last_reviewed": "2025-08-18",
+    "sources": [
+      {
+        "id": "src:1",
+        "title": "Swami Nikhilananda, The Gospel of Sri Ramakrishna (1942)",
+        "url": "https://archive.org/details/TheGospelOfSriRamakrishna",
+        "reliability": 0.8
+      },
+      {
+        "id": "src:2",
+        "title": "Swami Saradananda, Sri Ramakrishna and His Divine Play (1919)",
+        "url": "https://archive.org/details/sriramakrishnaandhisdivineplay",
+        "reliability": 0.7
+      }
+    ],
+    "last_reviewed": "2025-08-19",
     "reviewer": "editor@clearlist"
   },
   "license": {
@@ -191,11 +96,16 @@
     "media_notes": "respect original holders"
   },
   "ai": {
-    "synopsis": "",
-    "qa_pairs": []
+    "synopsis": "19th-century Bengali mystic who taught that devoted practice in any faith reveals one divine reality.",
+    "qa_pairs": [
+      {
+        "q": "What did he teach about religions?",
+        "a": "That sincere devotion in any faith can lead to the same God."
+      }
+    ]
   },
   "seo": {
     "slug": "ramakrishna",
-    "summary": ""
+    "summary": "Bengali mystic (1836–1886) emphasizing direct divine experience and the unity of religions."
   }
 }
