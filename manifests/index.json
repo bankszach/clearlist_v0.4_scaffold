@@ -1,16 +1,20 @@
 {
-  "profiles":[
+  "profiles": [
     {
-      "id":"anandamayi-ma",
-      "hash":"sha256-aea7330fc7ae65c61806ccd377b6aa401eaf6da20198d875f25a7a5bda20cdf0"
+      "id": "anandamayi-ma",
+      "hash": "sha256-aea7330fc7ae65c61806ccd377b6aa401eaf6da20198d875f25a7a5bda20cdf0"
     },
     {
-      "id":"ramana-maharshi",
-      "hash":"sha256-ddd83bbdbb5f1520909d2c763928d9ccc515bb9b4080add369d85a0f8fb1ca22"
+      "id": "ramana-maharshi",
+      "hash": "sha256-ddd83bbdbb5f1520909d2c763928d9ccc515bb9b4080add369d85a0f8fb1ca22"
     },
     {
-      "id":"nisargadatta-maharaj",
-      "hash":"sha256-11cc5f684566b387be4a570ab41deaa9372711b8f007464e5760b7a0b504c471"
+      "id": "nisargadatta-maharaj",
+      "hash": "sha256-11cc5f684566b387be4a570ab41deaa9372711b8f007464e5760b7a0b504c471"
+    },
+    {
+      "id": "ramakrishna",
+      "hash": "sha256-2096f80081fc11f7ccbeb8fb1e8eeb0fdb1d15a8809ba8fc84b82bb3772bd576"
     }
   ]
 }
