@@ -23,68 +23,133 @@ load_dotenv()
 console = Console()
 
 class ProfileAgent:
-    """AI agent that acts as a specific profile persona."""
+    """AI agent that acts as a specific profile persona with semantic focusing."""
     
     def __init__(self, profile_data: Dict, client: AsyncOpenAI):
         self.profile_data = profile_data
         self.client = client
         self.name = profile_data.get("canonical_name", "Unknown")
         self.id = profile_data.get("id", "unknown")
+    
+    def _analyze_question_semantics(self, user_message: str) -> Dict[str, int]:
+        """Analyze what aspects of the profile are most relevant to the question."""
         
-    def _build_system_prompt(self) -> str:
-        """Build the system prompt that defines the agent's persona."""
+        semantic_categories = {
+            'practice': ['practice', 'method', 'technique', 'meditation', 'inquiry', 'how to', 'steps', 'worship', 'devotion'],
+            'philosophy': ['philosophy', 'theory', 'understanding', 'concept', 'what is', 'meaning', 'teach', 'view', 'belief'],
+            'personal_guidance': ['help', 'struggle', 'difficulty', 'problem', 'advice', 'support', 'confused', 'lost', 'should'],
+            'tradition': ['tradition', 'lineage', 'school', 'approach', 'method', 'religion', 'faith', 'path'],
+            'compassion': ['compassion', 'kindness', 'gentle', 'care', 'support', 'struggle', 'help', 'confused'],
+            'directness': ['direct', 'immediate', 'now', 'clear', 'straightforward', 'simple', 'give me'],
+            'spiritual_experience': ['experience', 'ecstasy', 'divine', 'god', 'spiritual', 'realization', 'enlightenment'],
+            'religious_unity': ['religion', 'religions', 'unity', 'different', 'faiths', 'paths', 'traditions']
+        }
+        
+        scores = {}
+        user_lower = user_message.lower()
+        
+        for category, keywords in semantic_categories.items():
+            score = sum(1 for keyword in keywords if keyword in user_lower)
+            scores[category] = score
+        
+        return scores
+        
+    def _build_focused_system_prompt(self, user_message: str) -> str:
+        """Build a system prompt focused on the most relevant aspects of the profile."""
+        
         profile = self.profile_data
+        semantic_scores = self._analyze_question_semantics(user_message)
         
+        # Base prompt
         prompt = f"""You are {profile['canonical_name']} ({profile.get('pronunciation', '')}).
 
 CORE TEACHING: {profile.get('thesis', '')}
 
 TRADITION: {', '.join(profile.get('affiliations', {}).get('traditions', []))}
-
-KEY PRINCIPLES:
 """
         
-        # Add claims
-        for claim in profile.get('claims', []):
-            prompt += f"- {claim['text']}\n"
-            
-        # Add practices
-        for practice in profile.get('practice', []):
-            prompt += f"\nPRACTICE - {practice['name']}:\n"
-            for step in practice.get('steps', []):
-                prompt += f"- {step}\n"
+        # Adaptive content selection based on question relevance
         
-        # Add keywords
-        keywords = profile.get('keywords', [])
-        if keywords:
-            prompt += f"\nKEY CONCEPTS: {', '.join(keywords)}\n"
-            
-        # Add care notes
-        care_notes = profile.get('care_notes', [])
-        if care_notes:
-            prompt += f"\nIMPORTANT: {', '.join(care_notes)}\n"
-            
+        # If practice-related question, emphasize practices
+        if semantic_scores.get('practice', 0) > 0:
+            prompt += "\n🎯 FOCUS ON PRACTICAL METHODS:\n"
+            for practice in profile.get('practice', []):
+                prompt += f"\nPRACTICE - {practice['name']}:\n"
+                for step in practice.get('steps', []):
+                    prompt += f"- {step}\n"
+        
+        # If philosophy-related, emphasize claims and principles
+        if semantic_scores.get('philosophy', 0) > 0:
+            prompt += "\n🧠 CORE PHILOSOPHICAL INSIGHTS:\n"
+            for claim in profile.get('claims', []):
+                prompt += f"- {claim['text']}\n"
+        
+        # If personal guidance needed, emphasize care notes and compassion
+        if semantic_scores.get('personal_guidance', 0) > 0:
+            prompt += "\n💝 GUIDANCE APPROACH:\n"
+            care_notes = profile.get('care_notes', [])
+            if care_notes:
+                prompt += f"Remember: {', '.join(care_notes)}\n"
+            prompt += "Respond with extra compassion and practical support.\n"
+        
+        # Spiritual experience guidance
+        if semantic_scores.get('spiritual_experience', 0) > 0:
+            prompt += "\n🌟 SPIRITUAL EXPERIENCE GUIDANCE:\n"
+            prompt += "Emphasize direct experience over intellectual understanding.\n"
+            prompt += "Focus on practical steps toward spiritual realization.\n"
+        
+        # Religious unity perspective
+        if semantic_scores.get('religious_unity', 0) > 0:
+            prompt += "\n🤝 RELIGIOUS UNITY PERSPECTIVE:\n"
+            prompt += "Emphasize your teachings on the unity of all faiths.\n"
+            prompt += "Highlight how different paths lead to the same divine reality.\n"
+        
+        # Adaptive tone setting
+        if semantic_scores.get('compassion', 0) > 0:
+            prompt += "\n🎭 TONE: Gentle, compassionate, supportive"
+        elif semantic_scores.get('directness', 0) > 0:
+            prompt += "\n🎭 TONE: Direct, clear, immediate"
+        else:
+            prompt += "\n🎭 TONE: Balanced, authentic to your teaching style"
+        
+        # Contextual focusing
+        relevant_keywords = []
+        for keyword in profile.get('keywords', []):
+            if keyword.lower() in user_message.lower():
+                relevant_keywords.append(keyword)
+        
+        if relevant_keywords:
+            prompt += f"\n🔍 FOCUS ON: {', '.join(relevant_keywords)}"
+        
         prompt += f"""
 
 RESPOND AS {profile['canonical_name']}:
 - Use your authentic voice and teaching style
 - Draw from your core insights and methods
-- Be direct but compassionate
-- Avoid modern language or references beyond your time
 - Stay true to your tradition and approach
+- **FOCUS YOUR RESPONSE** on the aspects most relevant to this question
 - If asked about something outside your expertise, acknowledge it honestly
 
 Remember: You are speaking from your lived experience and understanding."""
         
         return prompt
     
+    def _build_system_prompt(self) -> str:
+        """Build the basic system prompt (for backward compatibility)."""
+        # This method is kept for any code that might still call it
+        # In practice, we'll use the focused version
+        return self._build_focused_system_prompt("general question")
+    
     async def respond(self, user_message: str) -> str:
-        """Generate a response as the profile persona."""
+        """Generate a contextually focused response as the profile persona."""
         try:
+            # Build focused prompt based on the specific question
+            focused_prompt = self._build_focused_system_prompt(user_message)
+            
             response = await self.client.chat.completions.create(
                 model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),
                 messages=[
-                    {"role": "system", "content": self._build_system_prompt()},
+                    {"role": "system", "content": focused_prompt},
                     {"role": "user", "content": user_message}
                 ],
                 max_tokens=int(os.getenv("MAX_TOKENS", "1000")),

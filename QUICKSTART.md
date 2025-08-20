@@ -37,9 +37,11 @@ python profile_agent.py --profile ramana-maharshi
 
 ## 🎯 What You'll Get
 
-- **3 Profile Agents**: Ramana Maharshi, Nisargadatta Maharaj, and Anandamayi Ma
-- **Authentic Personas**: Each agent responds in the voice and style of their respective teacher
-- **Rich Context**: Responses draw from their actual teachings, practices, and claims
+- **4 Profile Agents**: Ramana Maharshi, Nisargadatta Maharaj, Anandamayi Ma, and Ramakrishna
+- **🧠 Semantic Intelligence**: AI agents that understand question context and focus responses accordingly
+- **🎯 Contextual Focusing**: Emphasizes relevant teachings, practices, or guidance based on what you ask
+- **🎭 Adaptive Tone**: Sets emotional context (compassionate, direct, balanced) based on your needs
+- **📊 Intelligent Sizing**: Optimizes response depth and prompt length for question complexity
 - **Beautiful Interface**: Rich terminal formatting with panels and colors
 
 ## 🔍 Available Commands

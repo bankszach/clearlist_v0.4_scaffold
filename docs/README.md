@@ -19,11 +19,21 @@ Links come later in `links/edges.json`.
 3. Update `manifests/index.json` (hashes) — or run the provided script in your toolchain.
 4. Add links later to `links/edges.json`.
 
-## 🚀 AI Wisdom Agents
-Transform profiles into interactive AI agents that embody each teacher's wisdom:
-- **Interactive Conversations**: Chat with spiritual teachers in their authentic voice
-- **Rich Context**: AI responses draw from documented teachings, practices, and claims
-- **Cross-Tradition Dialogue**: Explore different approaches to nondual insight
-- **Ready to Use**: Complete Python system with OpenAI integration
+## 🚀 AI Wisdom Agents with Semantic Intelligence
+Transform profiles into **adaptive AI agents** that embody each teacher's wisdom:
+
+- **🧠 Semantic Intelligence**: AI agents that understand question context and focus responses accordingly
+- **🎯 Contextual Focusing**: Emphasizes relevant teachings, practices, or guidance based on what you ask
+- **🎭 Adaptive Tone**: Sets emotional context (compassionate, direct, balanced) based on your needs
+- **📊 Intelligent Sizing**: Optimizes response depth and prompt length for question complexity
+- **🌐 Cross-Tradition Dialogue**: Explore different approaches to nondual insight with context-aware responses
+- **⚡ Ready to Use**: Complete Python system with OpenAI integration and semantic focusing
+
+### **What Makes This Special**
+Unlike static AI chatbots, these agents **adapt their responses** based on your questions:
+- Ask about practice → Get focused, step-by-step guidance
+- Ask about philosophy → Get theoretical insights and core claims
+- Ask for help with struggles → Get compassionate, supportive responses
+- Ask for direct answers → Get clear, immediate guidance
 
 See `README_demo.md` for full AI agent documentation and setup.

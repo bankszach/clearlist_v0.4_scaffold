@@ -84,29 +84,31 @@ This system represents a breakthrough in how structured spiritual data can be us
 - **Structured Wisdom**: CLEARLIST's carefully curated profiles of spiritual teachers
 - **AI Technology**: OpenAI's language models for natural conversation
 - **Authentic Context**: Rich metadata including teachings, practices, and traditions
+- **Semantic Intelligence**: Adaptive prompt focusing that responds to question context
 
-We've created something unique: AI agents that don't just simulate spiritual teachers, but truly embody their documented wisdom and approach.
+We've created something unique: AI agents that don't just simulate spiritual teachers, but truly embody their documented wisdom and approach with **contextual intelligence**.
 
 ## How It Works
 
 ### 1. Profile Loading
 The `ProfileManager` class scans the `profiles/` directory and loads all JSON files, parsing them into structured data.
 
-### 2. Persona Construction
-Each `ProfileAgent` builds a comprehensive system prompt that includes:
-- Core teachings and thesis
-- Traditional affiliations
-- Key claims and principles
-- Practice methods and steps
-- Important care notes
-- Behavioral instructions
+### 2. Semantic Persona Construction
+Each `ProfileAgent` builds **adaptive system prompts** that dynamically focus on the most relevant aspects:
 
-### 3. AI Response Generation
-The agent uses the OpenAI API to generate responses that:
-- Stay true to the teacher's voice and style
-- Draw from their specific teachings and methods
-- Avoid anachronistic language
-- Maintain authenticity to their tradition
+- **Question Analysis**: Semantic understanding of what the user is asking
+- **Contextual Focus**: Emphasizes relevant teachings, practices, or guidance
+- **Adaptive Tone**: Sets emotional context (compassionate, direct, balanced)
+- **Dynamic Content**: Includes only the most relevant profile sections
+- **Intelligent Sizing**: Optimizes prompt length based on question complexity
+
+### 3. Adaptive AI Response Generation
+The agent uses **semantic focusing** to generate responses that:
+- **Stay true to the teacher's voice** and style
+- **Focus on the most relevant aspects** of their teachings
+- **Adapt emotional tone** based on the question context
+- **Optimize response depth** for question complexity
+- **Maintain authenticity** while being contextually appropriate
 
 ### 4. Rich Interaction
 The system provides:
@@ -170,6 +172,37 @@ Edit the `_build_system_prompt()` method in `ProfileAgent` to customize how pers
 - **Error Handling**: Graceful fallbacks for API failures and missing data
 - **Type Hints**: Full type annotations for better development experience
 - **Modular Design**: Clean separation of concerns between profile management and AI interaction
+
+## 🧠 Semantic Intelligence System
+
+### **How Semantic Focusing Works**
+
+The system analyzes each question through **8 semantic categories**:
+
+1. **Practice** (`practice`, `method`, `technique`, `meditation`, `inquiry`, `how to`, `steps`, `worship`, `devotion`)
+2. **Philosophy** (`philosophy`, `theory`, `understanding`, `concept`, `what is`, `meaning`, `teach`, `view`, `belief`)
+3. **Personal Guidance** (`help`, `struggle`, `difficulty`, `problem`, `advice`, `support`, `confused`, `lost`, `should`)
+4. **Tradition** (`tradition`, `lineage`, `school`, `approach`, `method`, `religion`, `faith`, `path`)
+5. **Compassion** (`compassion`, `kindness`, `gentle`, `care`, `support`, `struggle`, `help`, `confused`)
+6. **Directness** (`direct`, `immediate`, `now`, `clear`, `straightforward`, `simple`, `give me`)
+7. **Spiritual Experience** (`experience`, `ecstasy`, `divine`, `god`, `spiritual`, `realization`, `enlightenment`)
+8. **Religious Unity** (`religion`, `religions`, `unity`, `different`, `faiths`, `paths`, `traditions`)
+
+### **Adaptive Prompt Building**
+
+- **Practice Questions**: Emphasize practical methods and step-by-step instructions
+- **Philosophy Questions**: Focus on core claims and theoretical insights
+- **Struggle Questions**: Add compassionate guidance and care notes
+- **Direct Questions**: Set clear, immediate tone for straightforward answers
+- **Spiritual Questions**: Emphasize direct experience over intellectual understanding
+- **Religious Questions**: Highlight unity perspectives and cross-tradition insights
+
+### **Intelligent Prompt Sizing**
+
+- **Simple Questions**: Streamlined prompts (500-600 characters)
+- **Complex Questions**: Rich context (800-1000 characters)
+- **Multi-faceted Questions**: Balanced approach (700-800 characters)
+- **Contextual Focus**: Only includes relevant profile sections
 
 ## Troubleshooting
 

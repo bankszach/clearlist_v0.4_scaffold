@@ -94,7 +94,7 @@ def test_profile_search():
 
 def test_system_prompt_generation():
     """Test that system prompts can be generated (without API calls)."""
-    print("\nTesting System Prompt Generation...")
+    print("\nTesting Semantic Prompt Generation...")
     
     try:
         from profile_agent import ProfileAgent
@@ -108,21 +108,45 @@ def test_system_prompt_generation():
         
         if profile_data:
             agent = ProfileAgent(profile_data, mock_client)
-            prompt = agent._build_system_prompt()
             
-            if "Ramana Maharshi" in prompt and "self-inquiry" in prompt.lower():
-                print("✅ System prompt generation works")
-                print(f"   Prompt length: {len(prompt)} characters")
+            # Test different types of questions
+            test_questions = [
+                "How do I practice self-inquiry?",
+                "What is nonduality?",
+                "I'm struggling with meditation, help me"
+            ]
+            
+            all_prompts_work = True
+            
+            for question in test_questions:
+                prompt = agent._build_focused_system_prompt(question)
+                
+                if "Ramana Maharshi" not in prompt:
+                    print(f"❌ Missing name in prompt for: {question}")
+                    all_prompts_work = False
+                    continue
+                
+                # Check semantic focusing is working
+                if "practice" in question.lower() and "FOCUS ON PRACTICAL METHODS" not in prompt:
+                    print(f"⚠️  Practice question didn't trigger practice focus: {question}")
+                
+                if "struggle" in question.lower() and "GUIDANCE APPROACH" not in prompt:
+                    print(f"⚠️  Struggle question didn't trigger guidance: {question}")
+                
+                print(f"✅ Generated {len(prompt)} char prompt for: {question}")
+            
+            if all_prompts_work:
+                print("✅ Semantic prompt generation works")
                 return True
             else:
-                print("❌ System prompt missing expected content")
+                print("❌ Some semantic prompts failed")
                 return False
         else:
             print("❌ Could not get profile data for testing")
             return False
             
     except Exception as e:
-        print(f"❌ Error testing system prompt generation: {e}")
+        print(f"❌ Error testing semantic prompt generation: {e}")
         return False
 
 def main():
